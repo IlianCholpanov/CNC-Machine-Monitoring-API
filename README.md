@@ -71,3 +71,21 @@ machine_monitoring/
 ```bash
     uvicorn backend.api:app --reload
 ```
+
+## 6️⃣ API Endpoints
+### **Base URL:** http://127.0.0.1:8000
+
+```
+    List All machines
+        GET /machines
+    Receive live machine data
+        GET /machines/{machine_id}/live
+    Start a machine
+        POST /machines/{machine_id}/start
+    Stop a machine
+        POST /machine/{machine_id}/stop?reason=maintenance
+    Log a produced part
+        POST /machines/{machine_id}/produce
+    Get summary (last snapshot from database)
+        GET /machines/{machine_id}/summary
+```
