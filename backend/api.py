@@ -9,6 +9,8 @@ logger = DataLogger()
 machines = {
     "M01": Machine("M01"),
     "M02": Machine("M02"),
+    "M03": Machine("M03"),
+    "M04": Machine("M04"),
 }
 
 @app.get("/machines")
