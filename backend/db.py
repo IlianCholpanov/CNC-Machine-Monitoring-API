@@ -27,7 +27,7 @@ def init_db():
 
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS machines (
-       machine_id TEXT
+       machine_id TEXT,
        PRIMARY KEY,
        status TEXT,
        temperature REAL,
