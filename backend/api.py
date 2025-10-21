@@ -52,7 +52,7 @@ def produce_part(machine_id: str):
 @app.get("/machines/{machine_id}/summary")
 def get_summary(machine_id: str):
     conn = logger.conn
-    cursor = conn.execute("SELECT FROM machines WHERE machine_id=?", (machine_id,))
+    cursor = conn.execute("SELECT * FROM machines WHERE machine_id=?", (machine_id,))
     row = cursor.fetchone()
     if row:
         return {
